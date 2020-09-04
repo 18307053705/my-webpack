@@ -7,14 +7,14 @@ import ExportJsonExcel from "js-export-excel";
 
 // import { MyPromise } from './index.ts'
 
-export interface propsCeof {
+export interface PropsCeof {
   id:number,
   organization_code:number,
   organization_name:string
 }
 
 function downloadExcel(){
-    const data:Array<propsCeof> = [
+    const data:Array<PropsCeof> = [
         {
             id:1,
             organization_code:123,
@@ -35,7 +35,7 @@ function downloadExcel(){
       fileName:'',
       datas:[]
     };
-    let dataTable = [];
+    let dataTable:Array<any>= [];
     if (data) {
       for (let i in data) {
         if (data) {
