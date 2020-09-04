@@ -15,10 +15,10 @@
     // "rootDir": "./", // 指定输出文件目录(用于输出)，用于控制输出目录结构
     // "declaration": true, // 生成声明文件，开启后会自动生成声明文件
     // "declarationDir": "./file", // 指定生成声明文件存放目录
-    "emitDeclarationOnly": true, // 只生成声明文件，而不会生成js文件
+    // "emitDeclarationOnly": true, // 只生成声明文件，而不会生成js文件
     // "sourceMap": true, // 生成目标文件的sourceMap文件
     "inlineSourceMap": true, // 生成目标文件的inline SourceMap，inline SourceMap会包含在生成的js文件中
-    "declarationMap": true, // 为声明文件生成sourceMap
+    // "declarationMap": true, // 为声明文件生成sourceMap
     // "typeRoots": [], // 声明文件目录，默认时node_modules/@types
     // "types": [], // 加载的声明文件包
     "removeComments": true, // 删除注释
