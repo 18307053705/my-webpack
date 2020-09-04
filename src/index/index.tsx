@@ -7,8 +7,14 @@ import ExportJsonExcel from "js-export-excel";
 
 // import { MyPromise } from './index.ts'
 
+export interface propsCeof {
+  id:number,
+  organization_code:number,
+  organization_name:string
+}
+
 function downloadExcel(){
-    const data = [
+    const data:Array<propsCeof> = [
         {
             id:1,
             organization_code:123,
@@ -25,7 +31,10 @@ function downloadExcel(){
             organization_name:'李二'
         }
     ]; //表格数据
-    var option = {};
+    var option:{fileName:string,datas:Array<any>} = {
+      fileName:'',
+      datas:[]
+    };
     let dataTable = [];
     if (data) {
       for (let i in data) {
@@ -69,7 +78,7 @@ function Init() {
 
   Promise.all([promise2,promise1,promise3]).then(
     (res1)=>{
-      console.log(res1,res2,res3)
+      console.log(res1)
     }
   ).catch(err=>{
     console.log(err)

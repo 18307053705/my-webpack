@@ -7,7 +7,7 @@ const rootPath = path.resolve(__dirname, '..');
 module.exports = {
   // 监听文件变化，自动打包
   watch: true,
-  entry: `${rootPath}/src/index/index.js`,
+  entry: `${rootPath}/src/index/index.tsx`,
   output: {
     path: path.resolve(rootPath, 'dev'),
     filename: '[name].js',
@@ -19,7 +19,7 @@ module.exports = {
     rules: [
       // 处理react
       {
-        test: /(\.js|\.jsx|\.ts)$/,
+        test: /(\.js|\.jsx|\.ts|\.tsx)$/,
         exclude: /node_modules/,
         use:[
           {
@@ -32,13 +32,6 @@ module.exports = {
               // configFile: `${rootPath}/tsconfig.json`,
             },
         },
-      //   {
-      //     loader: 'ts-loader',
-      //     options: {
-      //         // 指定特定的ts编译配置，为了区分脚本的ts配置
-      //         configFile: `${rootPath}/tsconfig.json`,
-      //     },
-      // },
       ]
       },
       // 处理less
