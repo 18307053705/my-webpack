@@ -16,7 +16,7 @@ const asyncComponent = (fn) => {
   return () => {
     const [Component, setComponent] = useState(null);
     useEffect(() => {
-      componentPormis(fn).then((dom) => {
+      componentPormis(fn).then((dom: any | PromiseLike<void>) => {
         setComponent(dom.default);
       });
     }, []);
