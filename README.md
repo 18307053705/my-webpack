@@ -1,6 +1,15 @@
-## webpack + React 
+## webpack + React + antd + redux
 
-## 安装依赖
-tnpm i --save-dev html-webpack-plugin style-loader css-loader less-loader less babel-plugin-transform-runtime  babel-loader babel-core babel-preset-env webpack webpack-cli
+## 项目运行
 
-tnpm i --save babel-runtime 
+npm i
+
+npm run dev
+
+## ts 报错忽略
+
+## 单行忽略 // @ts-ignore
+
+## 忽略全文 // @ts-nocheck
+
+## 取消忽略全文 // @ts-check

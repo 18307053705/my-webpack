@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require("path");
 const rootPath = path.resolve(__dirname);
 
 module.exports = {
@@ -7,8 +7,8 @@ module.exports = {
     es2020: true,
   },
   extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
+    "eslint:recommended",
+    "plugin:react/recommended",
     `${rootPath}/eslintrcConfig/base.js`,
     `${rootPath}/eslintrcConfig/import.js`,
   ],
@@ -17,12 +17,8 @@ module.exports = {
       jsx: true,
     },
     ecmaVersion: 11,
-    sourceType: 'module',
+    sourceType: "module",
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-  ],
-  rules: {
-  },
+  plugins: ["react", "@typescript-eslint"],
+  rules: {},
 };
