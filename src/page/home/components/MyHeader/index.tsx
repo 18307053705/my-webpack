@@ -1,12 +1,45 @@
 import React from "react";
-import { Menu } from "antd";
+import { Menu, Dropdown } from "antd";
+// import { appRequest } from "@cgi";
+import { setCookie, getCookie } from "@hooks";
+
+// async function rea(val) {
+//   const data = await appRequest({
+//     statusCode: 123,
+//     da: 4564,
+//   });
+//   console.log(data);
+//   // return data;
+// }
+function menu() {
+  return (
+    <Menu>
+      <Menu.Item>退出登录</Menu.Item>
+    </Menu>
+  );
+}
+
+function Logo() {
+  const logoIn = getCookie("logoIn");
+  if (logoIn) {
+    return (
+      /* @ts-ignore */
+      <Dropdown overlay={menu}>
+        <span>登录了</span>
+      </Dropdown>
+    );
+  }
+  return <div>登录/注册</div>;
+}
+
 function MyHeader() {
   return (
-      <Menu className="my_header_warp" theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
-        <Menu.Item key="1">nav 1</Menu.Item>
-        <Menu.Item key="2">nav 2</Menu.Item>
-        <Menu.Item key="3">nav 3</Menu.Item>
-      </Menu>
+    <div className="my_header_warp">
+      <div></div>
+      <div className="my_header_dropdown">
+        <Logo />
+      </div>
+    </div>
   );
 }
 

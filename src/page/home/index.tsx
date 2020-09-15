@@ -12,17 +12,6 @@ import MyHeader from "./components/MyHeader";
 import MySider from "./components/MySider";
 
 function Root() {
-  const data = [
-    {
-      appli: [{ app: 0, li: 0 }],
-    },
-  ];
-  console.log(
-    data.map(({ appli }) => {
-      const { app, li } = appli[0];
-      return { app, li };
-    })
-  );
   return (
     <Layout style={{ minHeight: "100vh" }}>
       <MyHeader />

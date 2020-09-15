@@ -13,3 +13,6 @@ npm run dev
 ## 忽略全文 // @ts-nocheck
 
 ## 取消忽略全文 // @ts-check
+
+
+## 数据库 npm i mongodb --save

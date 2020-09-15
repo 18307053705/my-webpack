@@ -8,7 +8,8 @@
     "start": "webpack --watch --config  config/webpack.config.js",
     "eslint": "eslint --ext .js,.ts,.tsx src/",
     "eslint-fix": "eslint src/ --ext .js,.ts,.tsx --fix",
-    "dev": "webpack-dev-server --config  config/webpack.config.js"
+    "dev": "webpack-dev-server --config  config/webpack.config.js",
+    "server": "node server/server.js"
   },
   "author": "",
   "license": "ISC",
@@ -40,6 +41,8 @@
   },
   "dependencies": {
     "antd": "^4.6.3",
+    "axios": "^0.20.0",
+    "mongodb": "^3.6.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-loadable": "^5.5.0",
