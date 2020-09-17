@@ -1,10 +1,8 @@
 ## webpack + React + antd + redux
 
-## 项目运行
-
-npm i
-
-npm run dev
+## 项目运行 
+    npm i  
+    npm run dev
 
 ## ts 报错忽略
 
@@ -15,4 +13,4 @@ npm run dev
 ## 取消忽略全文 // @ts-check
 
 
-## 数据库 npm i mongodb --save
+## mongoDB 运行 ： mongod  --config "C:\Program Files\MongoDB\mongod.cfg"

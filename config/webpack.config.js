@@ -2,7 +2,6 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 
-
 // 获取根路径
 const rootPath = path.resolve(__dirname, "..");
 module.exports = {
@@ -76,6 +75,10 @@ module.exports = {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.(swf|ttf|eot|svg|woff(2))(\?[a-z0-9]+)?$/,
+        loader: "file-loader",
+      },
       // 处理图片
       {
         test: /\.(png|jpg|gif|svg)(\?.*)?$/,
@@ -123,7 +126,6 @@ module.exports = {
       // hash: true, //避免缓存js
       template: `${rootPath}/public/index.html`, // 打包模板
       favicon: `${rootPath}/public/favicon.jpg`, //网页图标
-      
     }),
   ],
 };

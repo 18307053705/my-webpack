@@ -1,7 +1,12 @@
-import React from 'react';
+import React from "react";
 
-function One(){
-    return <div>one</div>
+function One() {
+ 
+  return (
+    <div>
+      noe
+    </div>
+  );
 }
 
-export default One
+export default One;

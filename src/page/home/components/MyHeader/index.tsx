@@ -1,7 +1,7 @@
 import React from "react";
 import { Menu, Dropdown } from "antd";
 // import { appRequest } from "@cgi";
-import { setCookie, getCookie } from "@hooks";
+import { getCookie } from "@hooks";
 
 // async function rea(val) {
 //   const data = await appRequest({

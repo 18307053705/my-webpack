@@ -1,25 +1,30 @@
 import axios, { Method } from "axios";
 
-import { CGIMap } from "@cgi";
-
 interface requestConfig {
   baseUrl?: string;
   type?: Method;
 }
 
 const URL = "//127.0.0.1:1337";
+export interface BaseRequstData {
+  [key: string]: any;
+}
 
-export async function Http<K extends keyof CGIMap>(
-  url: K,
-  data: CGIMap[K][0],
+export interface BaseResponseBody {
+  [key: string]: any;
+}
+export type DR = [BaseRequstData, BaseResponseBody];
+
+export async function Http<CgiMap extends { [k in keyof CgiMap]: DR }>(
+  url: keyof CgiMap,
+  data: CgiMap[keyof CgiMap][0],
   config?: requestConfig
-): Promise<CGIMap[K][1]> {
-
-  const newUrl = (config && config.baseUrl) ?  config.baseUrl : URL;
+): Promise<CgiMap[keyof CgiMap][1]> {
+  const newUrl = config && config.baseUrl ? config.baseUrl : URL;
   try {
     let req = await axios.request({
       url: `//${newUrl}${url}`,
-      method:(config && config.type) ? config.type : 'get',
+      method: config && config.type ? config.type : "get",
       params: data,
       timeout: 2000,
     });
